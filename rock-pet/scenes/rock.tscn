@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://bgqdrvbrqpgfo"]
+
+[ext_resource type="Texture2D" uid="uid://dslsr74xv6v04" path="res://images/rock.png" id="1_1di36"]
+[ext_resource type="Script" uid="uid://c4fcy1xmushjh" path="res://scenes/rock.gd" id="1_mek2u"]
+[ext_resource type="Texture2D" uid="uid://cabnr61xqelit" path="res://images/crystalFod.png" id="3_ik6fu"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mek2u"]
+radius = 74.0
+height = 150.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ik6fu"]
+bg_color = Color(1, 1, 1, 1)
+expand_margin_left = 3.0
+expand_margin_right = 3.0
+
+[node name="Rock" type="Area2D" unique_id=1845184991]
+position = Vector2(0, 44)
+script = ExtResource("1_mek2u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1072773129]
+position = Vector2(0, 20)
+shape = SubResource("CapsuleShape2D_mek2u")
+
+[node name="RockSprite" type="Sprite2D" parent="." unique_id=722805135]
+scale = Vector2(4.09375, 4.09375)
+texture = ExtResource("1_1di36")
+
+[node name="UI" type="Control" parent="." unique_id=1131756140]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -24.0
+offset_top = -68.0
+offset_right = 16.0
+offset_bottom = -28.0
+metadata/_edit_use_anchors_ = true
+
+[node name="HappinessBar" type="ProgressBar" parent="UI" unique_id=1812505938]
+self_modulate = Color(1, 0.18039216, 0.023529412, 1)
+custom_minimum_size = Vector2(80, 10)
+layout_mode = 0
+offset_left = -16.0
+offset_top = 8.0
+offset_right = 64.0
+offset_bottom = 18.0
+theme_override_colors/font_color = Color(0.9999998, 0.18095821, 0.023579447, 1)
+theme_override_colors/font_outline_color = Color(1, 0.18039216, 0.023529412, 1)
+step = 1.0
+value = 50.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="FoodBar" type="ProgressBar" parent="UI" unique_id=707125290]
+self_modulate = Color(1, 1, 0, 1)
+custom_minimum_size = Vector2(80, 10)
+layout_mode = 0
+offset_left = -16.0
+offset_top = 22.0
+offset_right = 64.0
+offset_bottom = 32.0
+theme_override_colors/font_color = Color(0.8392157, 0.7411765, 0, 1)
+theme_override_colors/font_outline_color = Color(0.8392157, 0.7411765, 0, 1)
+step = 1.0
+value = 100.0
+show_percentage = false
+metadata/_edit_use_anchors_ = true
+
+[node name="Food" type="Button" parent="UI" unique_id=567098001]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.2
+anchor_bottom = 0.2
+offset_left = 161.0
+offset_top = 37.0
+offset_right = 211.0
+offset_bottom = 87.0
+icon = ExtResource("3_ik6fu")
+icon_alignment = 1
+expand_icon = true
+metadata/_edit_use_anchors_ = true
+
+[node name="text" type="Label" parent="." unique_id=1418371213]
+offset_left = -31.0
+offset_top = 79.0
+offset_right = 14.0
+offset_bottom = 107.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 20
+theme_override_styles/normal = SubResource("StyleBoxFlat_ik6fu")
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="BoringTimer" type="Timer" parent="." unique_id=1499515325]
+wait_time = 600.0
+autostart = true
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="pressed" from="UI/Food" to="." method="_on_food_pressed"]
+[connection signal="timeout" from="BoringTimer" to="." method="_on_boring_timer_timeout"]

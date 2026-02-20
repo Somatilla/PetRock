@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bpkuneoyeg35s"]
+
+[ext_resource type="PackedScene" uid="uid://bgqdrvbrqpgfo" path="res://scenes/rock.tscn" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://dhvv75gnsydsj" path="res://scenes/bg.tscn" id="2_0wfyh"]
+
+[node name="main" type="Node2D" unique_id=1303286269]
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1727439233]
+
+[node name="Rock" parent="." unique_id=1845184991 instance=ExtResource("1_o5qli")]
+
+[node name="Parallax2D" parent="." unique_id=1652737660 instance=ExtResource("2_0wfyh")]
+scroll_offset = Vector2(10, 72)
