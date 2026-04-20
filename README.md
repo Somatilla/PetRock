@@ -22,9 +22,13 @@ More will be added later!
 # what will i add later?:
 
 -sound effects
+
 -a custom gamemode for coins
+
 -i will add a "not enough money" indicator if you bus something at the shop but you dont have money for it i just dont know how yet
+
 -at least one new item at every update
+
 Im developing 1.2.2 right now!
 
 # 🤖 This project uses AI
