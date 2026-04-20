@@ -4,8 +4,7 @@ If your rock goes hungry, there’s a button with a blue crystal on it to feed h
 Also, there is happiness in the game too! Give your rock a head-pat to make it happy!
 
 # images:
-<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/2f94f362-0438-4544-a00e-5d52a1bb670c" />
-<img width="393" height="210" alt="image" src="https://github.com/user-attachments/assets/6b3a1ac5-1809-43fd-8adc-4efe11f7a7d3" />
+<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/2f94f362-0438-4544-a00e-5d52a1bb670c" /><img width="393" height="210" alt="image" src="https://github.com/user-attachments/assets/6b3a1ac5-1809-43fd-8adc-4efe11f7a7d3" />
 
 
 # 1.2 update:
